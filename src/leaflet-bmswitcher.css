@@ -1,4 +1,4 @@
-.bmsrHidden{
+.bmHidden{
 	display: none;
 }
 
@@ -33,34 +33,33 @@
 	height: 100vh;
 }
 
-.bmSwitcher-modal .bmsrModal{
+.bmSwitcher-modal .bmModal{
 	background-color: #fff;
 	border-radius: 10px;
 	width: calc(100% - 40px);
-	min-height: calc(100vh - 300px);
-	overflow: hidden;
+	min-height: 300px;
+    max-height: calc((100vh - 40px));
+	overflow:hidden;
 	padding-bottom: 20px;
 }
 
-.bmSwitcher-modal .bmsrHeader{
+.bmSwitcher-modal .bmHeader{
 	display: flex;
 	padding: 20px;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.bmSwitcher-modal .bmsrClose{
+.bmSwitcher-modal .bmClose{
 	cursor: pointer;
 }
 
-.bmSwitcher-modal .bmsrBody{
-	padding: 0 20px;
-	height: calc(100% - 20px);
+.bmSwitcher-modal .bmBody{
+	padding: 0 0px;
 }
 
 
-.leaflet-control-bmSwitcher .active::before,
-.bmSwitcher-modal .active::before{
+.bmImage .active::before{
     color:white;
     content: '✔';
     width: 18px;
@@ -70,9 +69,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+.bmSwitcher-modal .active::before{
+    top: 5px;
+    right: 5px;
 }
 
-.leaflet-control-bmSwitcher .bmsrImage{
+.leaflet-control-bmSwitcher .bmImage{
     background-color: #fff;
     margin:5px;
     padding:5px;
@@ -80,7 +86,7 @@
 }
 
 
-.leaflet-control-bmSwitcher .bmsrImage div{
+.leaflet-control-bmSwitcher .bmImage div{
     background-size:cover;
     width: 70px;
     height: 70px;
@@ -90,7 +96,7 @@
     justify-content: space-between;
 }
 
-.bmsrImage div .name{
+.bmImage div .name{
     width:100%;
     padding: 10px;
     height:auto;
@@ -106,24 +112,22 @@
 
 
 .bmSwitcher-modal .bmContainer{
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
-    height: calc(100% - 40px);
- 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 10px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    height: calc(100vh - 80px);
+    overflow-x: hidden;
 }
 
-.bmSwitcher-modal .bmsrImage{
+.bmSwitcher-modal .bmImage{
     background-size:cover;
-	aspect-ratio: 1;
+    display: inline-block;
+    width:  calc((100vw - 100px) / 2);
+    height: calc((100vw - 100px) / 2);
+    padding: 10px;
 }
 
 
-.bmSwitcher-modal .bmsrImage div{
+.bmSwitcher-modal .bmImage div{
     background-size:cover;
     height: 100% !important;
     border-radius: 3px 3px;
@@ -132,29 +136,17 @@
     justify-content: space-between;
 }
 
-.bmSwitcher-modal .bmsrImage div .name{
-    width:100%;
-    height:auto;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 0;
-    color:black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
+.bmSwitcher-modal .bmImage div .name{
+    height:fit-content !important;
+    padding:10px 0 !important;
+    font-weight: bold;
 }
 
 .bmContainer:hover{
     cursor: pointer;
 }
 
-.bmsrImage div .check{
-    width:auto;
-    height:auto;
-    border-radius: 0;
-    display: flex;
-    align-items: flex-end;
-    font-weight: 500;
-    padding:1px;
+.bmImage div .check{
+    position: relative;
     content:''
 }

@@ -19,19 +19,19 @@ L.Control.bmSwitcher = L.Control.extend({
         document.body.appendChild(elModalBd);
 
         const elModal = document.createElement('div');
-        elModal.classList.add('bmsrModal');
+        elModal.classList.add('bmModal');
         elModalBd.appendChild(elModal);
 
         const elModalClose = document.createElement('div');
         elModalClose.innerHTML = `<span>&#10005;</span>`;
 
-        elModal.innerHTML =`<div class="bmsrHeader">
+        elModal.innerHTML =`<div class="bmHeader">
                                 <div><h3>BaseMap</h3></div>
-                                <div class="bmsrClose"></div>
+                                <div class="bmClose"></div>
                             </div>
-                            <div class="bmsrBody"></div>`;
+                            <div class="bmBody"></div>`;
         
-        elModal.querySelector('.bmsrClose').appendChild(elModalClose);
+        elModal.querySelector('.bmClose').appendChild(elModalClose);
         this._createItems();
         this._collapse();
         this._init();
@@ -47,7 +47,7 @@ L.Control.bmSwitcher = L.Control.extend({
         this.layers.forEach( (obj, index) => {
             obj.id = index
 
-            const imgContainer = L.DomUtil.create('div', 'bmsrImage');
+            const imgContainer = L.DomUtil.create('div', 'bmImage');
             const img = L.DomUtil.create('div');
             const name = L.DomUtil.create('div', 'name');
             const check = L.DomUtil.create('div', 'check');
@@ -110,7 +110,7 @@ L.Control.bmSwitcher = L.Control.extend({
         }
         this.container.querySelector(`.${this.classContainer}`).childNodes.forEach( (child, index) => {
             if(index !== this.activeMap.id){
-                child.classList.add('bmsrHidden')
+                child.classList.add('bmHidden')
                 let check = child.querySelector('.check')
                 check.classList.remove('active')
             }
@@ -122,16 +122,16 @@ L.Control.bmSwitcher = L.Control.extend({
         if(w>767)
         {
             this.container.querySelector(`.${this.classContainer}`).childNodes.forEach( (child) => {
-                child.classList.remove('bmsrHidden')
+                child.classList.remove('bmHidden')
             })
         }
         else
         {
             let elModal = document.querySelector(`.${this.classModal}`);
             this.container.querySelector(`.${this.classContainer}`).childNodes.forEach( (child) => {
-                child.classList.remove('bmsrHidden')
+                child.classList.remove('bmHidden')
             })
-            elModal.querySelector('.bmsrBody').appendChild(this.container.childNodes[0]);
+            elModal.querySelector('.bmBody').appendChild(this.container.childNodes[0]);
             elModal.classList.add('show');
         }
     },
