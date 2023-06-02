@@ -38,20 +38,21 @@
 	border-radius: 10px;
 	width: calc(100% - 40px);
 	min-height: 300px;
-    max-height: calc((100vh - 40px));
+    max-height: calc((100vh - 80px));
 	overflow:hidden;
 	padding-bottom: 20px;
 }
 
 .bmSwitcher-modal .bmHeader{
 	display: flex;
-	padding: 20px;
+	padding: 10px 20px;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .bmSwitcher-modal .bmClose{
 	cursor: pointer;
+    font-weight: bold;
 }
 
 .bmSwitcher-modal .bmBody{
@@ -80,6 +81,7 @@
 
 .leaflet-control-bmSwitcher .bmImage{
     background-color: #fff;
+    box-shadow: 2px 2px 10px #4442;
     margin:5px;
     padding:5px;
     border-radius: 5px;
