@@ -1,0 +1,160 @@
+.bmsrHidden{
+	display: none;
+}
+
+.leaflet-control-bmSwitcher .bmContainer{
+    height: auto;
+    width: auto;
+    display:flex;
+}
+
+.bmSwitcher-modal.backdrop{
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+    height: 0;
+    overflow: hidden;
+	background-color: #3333;
+	position: fixed;
+	display: flex;
+    transition: opacity .3s ease-out;
+    opacity: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.bmSwitcher-modal.show{
+    opacity: 1;
+	height: 100vh;
+}
+
+.bmSwitcher-modal.hide{
+    opacity: 0;
+	height: 100vh;
+}
+
+.bmSwitcher-modal .bmsrModal{
+	background-color: #fff;
+	border-radius: 10px;
+	width: calc(100% - 40px);
+	min-height: calc(100vh - 300px);
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+.bmSwitcher-modal .bmsrHeader{
+	display: flex;
+	padding: 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.bmSwitcher-modal .bmsrClose{
+	cursor: pointer;
+}
+
+.bmSwitcher-modal .bmsrBody{
+	padding: 0 20px;
+	height: calc(100% - 20px);
+}
+
+
+.leaflet-control-bmSwitcher .active::before,
+.bmSwitcher-modal .active::before{
+    color:white;
+    content: '✔';
+    width: 18px;
+    height: 18px;
+    background-color: #387B23;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leaflet-control-bmSwitcher .bmsrImage{
+    background-color: #fff;
+    margin:5px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+
+.leaflet-control-bmSwitcher .bmsrImage div{
+    background-size:cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 3px 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bmsrImage div .name{
+    width:100%;
+    padding: 10px;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    padding:1px;
+}
+
+
+.bmSwitcher-modal .bmContainer{
+    padding: 0;
+    margin: 0;
+    height: calc(100% - 40px);
+ 	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.bmSwitcher-modal .bmsrImage{
+    background-size:cover;
+	aspect-ratio: 1;
+}
+
+
+.bmSwitcher-modal .bmsrImage div{
+    background-size:cover;
+    height: 100% !important;
+    border-radius: 3px 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bmSwitcher-modal .bmsrImage div .name{
+    width:100%;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.bmContainer:hover{
+    cursor: pointer;
+}
+
+.bmsrImage div .check{
+    width:auto;
+    height:auto;
+    border-radius: 0;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 500;
+    padding:1px;
+    content:''
+}
