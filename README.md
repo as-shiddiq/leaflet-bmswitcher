@@ -1,5 +1,6 @@
-# Leaflet Control - BaseMap Switcher
+# Leaflet BaseMap Switcher
 a simple plugins to make it easier to create a basemap control to make it look more attractive, besides that it is also responsive for mobile displays.
+![Leaflet BaseMap Switcher](thumbnail.jpg)
 
 Based and inspired on [L.switchBasemap](https://github.com/clavijojuan/L.switchBasemap)
 ## Example
