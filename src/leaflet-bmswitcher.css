@@ -1,3 +1,7 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 .bmHidden{
 	display: none;
 }
@@ -44,21 +48,24 @@
 }
 
 .bmSwitcher-modal .bmHeader{
-	display: flex;
-	padding: 10px 20px;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bmSwitcher-modal .bmHeader h3{
+    padding: 0;
+    margin: 0;
 }
 
 .bmSwitcher-modal .bmClose{
 	cursor: pointer;
-    font-weight: bold;
 }
 
 .bmSwitcher-modal .bmBody{
 	padding: 0 0px;
 }
-
 
 .bmImage .active::before{
     color:white;
@@ -123,8 +130,8 @@
 .bmSwitcher-modal .bmImage{
     background-size:cover;
     display: inline-block;
-    width:  calc((100vw - 100px) / 2);
-    height: calc((100vw - 100px) / 2);
+    width:  50%;
+    aspect-ratio: 1/1;
     padding: 10px;
 }
 

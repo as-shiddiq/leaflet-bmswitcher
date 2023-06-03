@@ -23,7 +23,7 @@ L.Control.bmSwitcher = L.Control.extend({
         elModalBd.appendChild(elModal);
 
         const elModalClose = document.createElement('div');
-        elModalClose.innerHTML = `<span>&#10005;</span>`;
+        elModalClose.innerHTML = `<span>✕</span>`;
 
         elModal.innerHTML =`<div class="bmHeader">
                                 <div><h3>BaseMap</h3></div>
