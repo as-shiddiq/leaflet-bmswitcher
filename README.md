@@ -7,7 +7,13 @@ Based and inspired on [L.switchBasemap](https://github.com/clavijojuan/L.switchB
 See the [example](https://as-shiddiq.github.io/leaflet-bmswitcher/example/index.html)
 
 ## How to usage?
-Just include the `leaflet-bmswitcher.js` and don't forget also load `leaflet-bmswitcher.css` file from the `src/` dir, and then create an object and continue like the example below :
+
+```
+npm i leaflet-bmswitcher
+```
+or download this repository direcly and save to your project.
+
+and then include the `leaflet-bmswitcher.js` and don't forget also load `leaflet-bmswitcher.css` file from the `src/` dir, and then create an object and continue like the example below :
 ```js
 const map = L.map('map').setView([-3.8420201, 114.727848], 13);
 const bmList = [

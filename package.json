@@ -1,0 +1,26 @@
+{
+  "name": "leaflet-bmswitcher",
+  "version": "1.0.0",
+  "description": "Leaflet BaseMap Switcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as-shiddiq/leaflet-bmswitcher.git"
+  },
+  "keywords": [
+    "leaflet",
+    "basemap",
+    "switcher",
+    "bmswitcher",
+    "leaflet-bmswitcher"
+  ],
+  "author": "as-shiddiq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/as-shiddiq/leaflet-bmswitcher/issues"
+  },
+  "homepage": "https://github.com/as-shiddiq/leaflet-bmswitcher#readme"
+}
