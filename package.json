@@ -1,6 +1,6 @@
 {
   "name": "leaflet-bmswitcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Leaflet BaseMap Switcher",
   "main": "index.js",
   "scripts": {
